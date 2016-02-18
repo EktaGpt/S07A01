@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title> Javascript Dom and events</title>
+        <link href="S07A01.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <button id="like-unlike">Like</button>
+       
+        <script>
+            function changeBtn() 
+            {
+                var btnText = likeBtn.innerHTML;
+                if (btnText === 'Like') {
+                btnText = 'Unlike';
+                likeBtn.style.backgroundColor="orange";
+                } 
+                else {
+                    btnText = 'Like';
+                    likeBtn.style.backgroundColor="blue";
+                }
+
+                likeBtn.innerHTML = btnText;
+            }
+            var likeBtn = document.getElementById('like-unlike');
+            likeBtn.addEventListener('click', changeBtn, false);
+        </script>
+    </body>
+</html>
